@@ -50,12 +50,12 @@ nav a[aria-current= "page"] {
     display: inline-block;
 }
 
-#gray {
-    background: grey;
+#green {
+    background: green;
 }
 
-#white {
-    background: white;
+#blueviolet {
+    background: blueviolet;
 }
 
 #blue {

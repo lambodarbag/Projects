@@ -10,8 +10,8 @@ html, body {
 }
 
 body {
-    background-color: white;
-    color: black;
+    background-color: #212121;
+    color: #fff;
     font-family: system-ui, sans-serif;
 }
 
@@ -36,5 +36,21 @@ nav a {
 }
 nav a[aria-current= "page"] {
     color: white;
-    background-color: blueviolet;
+    background-color: orange;
+}
+
+.center {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#clock {
+    font-size: 40px;
+    background-color: orange;
+    padding: 20px 50px;
+    margin-top: 10px;
+    border-radius: 10px;
 }

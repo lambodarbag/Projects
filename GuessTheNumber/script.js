@@ -63,7 +63,7 @@ function displayGuess(guess) {
 }
 
 function displayMessage(message) {
-    lowOrHi.innerHTML = `<h2>${message}</h2>`
+    lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
 
 function endGame() {
@@ -89,6 +89,7 @@ function newGame() {
         remaining.innerHTML = `${11-numGuess}`;
         userInput.removeAttribute("disabled");
         startOver.removeChild(p);
+        lowOrHi.innerHTML = ``;
         playGame = true;
     })
 }

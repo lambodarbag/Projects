@@ -16,6 +16,7 @@ body {
     max-width: 750px;
     min-width: 480px;
     margin: 0 auto;
+    height: auto;
 }
 
 nav {
@@ -42,15 +43,14 @@ nav a[aria-current= "page"] {
     background-color: blueviolet;
 }
 
-.lastResult {
+.lastResult{
     color: white;
     padding: 7px;
 }
 
-.guesses {
+.guesses{
     color: white;
     padding: 7px;
-    background-color: #fff;
 }
 
 button {
@@ -112,4 +112,8 @@ h1 {
 p {
     font-size: 16px;
     text-align: center;
+    margin-top: 10px;
+}
+.resultParas {
+    margin-bottom: 40px;
 }

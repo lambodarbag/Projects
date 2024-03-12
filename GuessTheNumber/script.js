@@ -2,7 +2,6 @@ let randomNumber = parseInt(Math.random()*100+1);
 
 const submit = document.querySelector("#subt");
 const userInput = document.querySelector("#guessField");
-console.log(userInput.value);
 const guessSlot = document.querySelector(".guesses");
 const remaining = document.querySelector(".lastResult");
 const lowOrHi = document.querySelector(".lowOrHi");
@@ -32,8 +31,6 @@ function validateGuess(guess) {
         alert("Please enter a number less than 100")
     } else {
         prevGuess.push(guess);
-        console.log(prevGuess);
-        console.log(numGuess);
         if (numGuess === 10) {
             displayGuess(guess);
             displayMessage(`Game Over, Random number was ${randomNumber}`);
@@ -48,6 +45,7 @@ function validateGuess(guess) {
 function checkGuess(guess) {
     if (guess === randomNumber) {
         displayMessage(`You WON!, you guess it right`);
+        endGame();
     }else if (guess < randomNumber) {
         displayMessage("you have guessed too low");
     }else if (guess > randomNumber) {
@@ -68,7 +66,8 @@ function displayMessage(message) {
 
 function endGame() {
     userInput.value = "";
-    userInput.setAttribute("disabled", "");
+    userInput.setAttribute("disabled", "disabled");
+    submit.setAttribute("disabled", "disabled");
     p.classList.add("button");
     p.innerHTML = `<h2 id="newGame">Start New Game</h2>`;
     p.style.cursor = "pointer";
@@ -88,6 +87,7 @@ function newGame() {
         guessSlot.innerHTML = "";
         remaining.innerHTML = `${11-numGuess}`;
         userInput.removeAttribute("disabled");
+        submit.removeAttribute("disabled");
         startOver.removeChild(p);
         lowOrHi.innerHTML = ``;
         playGame = true;

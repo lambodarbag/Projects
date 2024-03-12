@@ -13,6 +13,7 @@ body {
     background-color: white;
     color: black;
     font-family: system-ui, sans-serif;
+    position: relative;
 }
 
 nav {
@@ -36,5 +37,33 @@ nav a {
 }
 nav a[aria-current= "page"] {
     color: white;
+    background-color: blueviolet;
+}
+
+button {
+    padding: 8px 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+h1 {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+#colorCode {
+    width: 190px;
+    height: 60px;
     background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
